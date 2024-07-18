@@ -4,10 +4,14 @@ import "./LandingPage.css";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useHotkeys } from "react-hotkeys-hook";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 function LandingPage() {
+  useHotkeys("alt+a", () => {
+    window.location.href = "/admin/login";
+  });
   return (
     <>
       <div className="bg">

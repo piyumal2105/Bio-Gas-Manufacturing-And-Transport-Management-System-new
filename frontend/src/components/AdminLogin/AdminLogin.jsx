@@ -45,7 +45,7 @@ function AdminLogin() {
           localStorage.setItem("admin", JSON.stringify(user.data.admin));
 
           // navigate to the /requested
-          navigate("/");
+          navigate("/admin/dashboard");
           console.log(user.data.admin);
         })
         .catch((error) => {
@@ -96,13 +96,27 @@ function AdminLogin() {
               style={{
                 width: "100%",
                 borderColor: "black",
-                borderWidth: "3px",
+                borderWidth: "2px",
                 backgroundColor: "#FFD800",
                 color: "black",
               }}
               className="mt-3"
             >
               Login
+            </Button>
+            <Button
+              href="/"
+              type="submit"
+              style={{
+                width: "100%",
+                borderColor: "black",
+                borderWidth: "2px",
+                backgroundColor: "#FFD800",
+                color: "black",
+              }}
+              className="mt-3"
+            >
+              Home Page
             </Button>
           </Form>
         </Card.Body>
