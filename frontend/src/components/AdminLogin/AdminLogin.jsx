@@ -45,7 +45,7 @@ function AdminLogin() {
           localStorage.setItem("admin", JSON.stringify(user.data.admin));
 
           // navigate to the /requested
-          navigate("/");
+          navigate("/admin/dashboard");
           console.log(user.data.admin);
         })
         .catch((error) => {
@@ -56,53 +56,72 @@ function AdminLogin() {
     }
   };
   return (
-    <Card
-      style={{
-        borderWidth: "2px",
-        padding: "40px",
-        height: "400px",
-        width: "80%",
-      }}
-      className="shadow"
-    >
-      <p className="h3 text-center">Admin Login</p>
-      <Card.Body>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control
-              placeholder="email@example.com"
-              value={credentials.email}
-              required
-              onChange={handleEmailChange}
-            />
-            {errors.length > 0 ? (
-              <p style={{ color: "red" }}>{errors}</p>
-            ) : null}
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              required
-              value={credentials.password}
-              onChange={handlePasswordChange}
-            />
-          </Form.Group>
-          <Button
-            type="submit"
-            style={{
-              width: "100%",
-              backgroundColor: "black",
-              borderColor: "black",
-            }}
-            className="mt-3"
-          >
-            Login
-          </Button>
-        </Form>
-      </Card.Body>
-    </Card>
+    <div className="d-flex justify-content-center align-items-center">
+      <Card
+        style={{
+          borderWidth: "2px",
+          padding: "40px",
+          height: "400px",
+          width: "40%",
+          marginTop: "120px",
+        }}
+        className="shadow"
+      >
+        <p className="h3 text-center">Admin Login</p>
+        <Card.Body>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                placeholder="email@example.com"
+                value={credentials.email}
+                required
+                onChange={handleEmailChange}
+              />
+              {errors.length > 0 ? (
+                <p style={{ color: "red" }}>{errors}</p>
+              ) : null}
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                required
+                value={credentials.password}
+                onChange={handlePasswordChange}
+              />
+            </Form.Group>
+            <Button
+              type="submit"
+              style={{
+                width: "100%",
+                borderColor: "black",
+                borderWidth: "2px",
+                backgroundColor: "#FFD800",
+                color: "black",
+              }}
+              className="mt-3"
+            >
+              Login
+            </Button>
+            <Button
+              href="/"
+              type="submit"
+              style={{
+                width: "100%",
+                borderColor: "black",
+                borderWidth: "2px",
+                backgroundColor: "#FFD800",
+                color: "black",
+              }}
+              className="mt-3"
+            >
+              Home Page
+            </Button>
+          </Form>
+        </Card.Body>
+      </Card>
+    </div>
   );
 }
 
