@@ -39,7 +39,7 @@ function Footer() {
             </Col>
             <Col xs={12} md={6} lg={3} className="mb-3">
               <h5>Follow Us On</h5>
-              <div>
+              <div className="mt-3">
                 <a
                   href="#"
                   style={{

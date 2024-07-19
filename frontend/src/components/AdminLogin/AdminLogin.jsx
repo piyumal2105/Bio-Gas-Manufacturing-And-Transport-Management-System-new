@@ -61,7 +61,7 @@ function AdminLogin() {
         style={{
           borderWidth: "2px",
           padding: "40px",
-          height: "400px",
+          height: "430px",
           width: "40%",
           marginTop: "120px",
         }}

@@ -21,17 +21,22 @@ function LandingPage() {
         <br />
         <br />
         <br />
-        <Container style={{ color: "white" }}>
-          <Row style={{ paddingLeft: "120px" }}>
+        <Container style={{ color: "black", fontWeight: "unset" }}>
+          <Row style={{ paddingLeft: "250px" }}>
             <Col style={{ fontSize: "35px" }}>
-              <i>GREEN ENERGY </i>
+              <i className="line-1">GREEN ENERGY </i>
               <br />
-              <i style={{ paddingLeft: "90px" }}>For a</i>
+              <i className="line-2" style={{ paddingLeft: "90px" }}>
+                For a
+              </i>
               <br />
-              <i style={{ paddingLeft: "50px" }}>BETTER TOMORROW</i>
+              <i className="line-3" style={{ paddingLeft: "50px" }}>
+                BETTER TOMORROW
+              </i>
             </Col>
           </Row>
         </Container>
+        <br />
         <br />
         <br />
         <br />

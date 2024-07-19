@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import dbConnect from "./configs/dbConfig.js";
 import AdminRoutes from "./routes/admin.auth.routes.js";
+import UserRoutes from "./routes/user.routes.js";
 
 //initialize express
 const app = express();
@@ -40,3 +41,4 @@ app.listen(PORT, () => {
 });
 
 app.use("/admin", AdminRoutes);
+app.use("/user", UserRoutes);

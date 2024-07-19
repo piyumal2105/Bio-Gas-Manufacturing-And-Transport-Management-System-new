@@ -4,6 +4,14 @@ import { Nav } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 import "./AdminNavbar.css";
+import { FaHome } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
+import { MdInventory2 } from "react-icons/md";
+import { FaCalendarCheck } from "react-icons/fa";
+import { ImLab } from "react-icons/im";
+import { GrUserWorker } from "react-icons/gr";
+import { FaPeopleCarry } from "react-icons/fa";
+import { TbLogout } from "react-icons/tb";
 
 function AdminNavbar() {
   const navigate = useNavigate();
@@ -23,56 +31,81 @@ function AdminNavbar() {
           </div>
           <Nav className="flex-column">
             <Nav.Link
-              href="/dashboard"
-              className="mt-3"
+              href="/admin/dashboard"
+              className="sidenavlink mt-3"
               style={{ color: "black", fontSize: "20px" }}
             >
+              <FaHome style={{ marginTop: "-4px", marginRight: "30px" }} />
               Dashboard
             </Nav.Link>
             <Nav.Link
               href="/customers"
-              className="mt-3"
+              className="sidenavlink mt-3"
               style={{ color: "black", fontSize: "20px" }}
             >
+              <FaUserAlt style={{ marginTop: "-6px", marginRight: "30px" }} />
               Customers
             </Nav.Link>
             <Nav.Link
               href="/inventory"
-              className="mt-3"
+              className="sidenavlink mt-3"
               style={{ color: "black", fontSize: "20px" }}
             >
+              <MdInventory2
+                style={{ marginTop: "-4px", marginRight: "30px" }}
+              />
               Inventory
             </Nav.Link>
             <Nav.Link
               href="/orders"
-              className="mt-3"
+              className="sidenavlink mt-3"
               style={{ color: "black", fontSize: "20px" }}
             >
+              <FaCalendarCheck
+                style={{ marginTop: "-7px", marginRight: "30px" }}
+              />
               Orders
             </Nav.Link>
             <Nav.Link
               href="/laboratory"
-              className="mt-3"
+              className="sidenavlink mt-3"
               style={{ color: "black", fontSize: "20px" }}
             >
+              <ImLab style={{ marginTop: "-5px", marginRight: "30px" }} />
               Laboratory
             </Nav.Link>
             <Nav.Link
               href="/employees"
-              className="mt-3"
+              className="sidenavlink mt-3"
               style={{ color: "black", fontSize: "20px" }}
             >
+              <GrUserWorker
+                style={{ marginTop: "-7px", marginRight: "30px" }}
+              />
               Employees
             </Nav.Link>
             <Nav.Link
               href="/suppliers"
-              className="mt-3"
+              className="sidenavlink mt-3"
               style={{ color: "black", fontSize: "20px" }}
             >
+              <FaPeopleCarry
+                style={{ marginTop: "-4px", marginRight: "30px" }}
+              />
               Suppliers
             </Nav.Link>
-            <Button className="logout" variant="dark" onClick={logout}>
+            <Button
+              className="logout"
+              onClick={logout}
+              style={{ backgroundColor: "black", borderColor: "black" }}
+            >
               Logout
+              <TbLogout
+                style={{
+                  fontSize: "25px",
+                  marginLeft: "20px",
+                }}
+              />
             </Button>
           </Nav>
         </div>
