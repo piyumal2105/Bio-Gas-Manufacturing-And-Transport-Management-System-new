@@ -31,7 +31,7 @@ function Header() {
                   <Nav.Link href="/" style={{ color: "black" }}>
                     Home
                   </Nav.Link>
-                  <Nav.Link href="#" style={{ color: "black" }}>
+                  <Nav.Link href="/product" style={{ color: "black" }}>
                     Products
                   </Nav.Link>
                   <Nav.Link href="/about" style={{ color: "black" }}>

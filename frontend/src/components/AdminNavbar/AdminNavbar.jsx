@@ -54,9 +54,9 @@ function AdminNavbar() {
             Customers
           </Nav.Link>
           <Nav.Link
-            href="/inventory"
+            href="/admin/inventory"
             className={`sidenavlink mt-3 ${
-              location.pathname === "/inventory" ? "active" : ""
+              location.pathname === "/admin/inventory" ? "active" : ""
             }`}
             style={{ color: "black", fontSize: "20px" }}
           >

@@ -11,6 +11,7 @@ import "./AdminDashboard.css";
 
 function AdminDashboard() {
   const [userCount, setUserCount] = useState(0);
+  const [productCount, setProductCount] = useState(0);
   useEffect(() => {
     axios
       .get("http://localhost:3001/user/allusers")
@@ -21,6 +22,17 @@ function AdminDashboard() {
         console.log(error);
       });
   }, []);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/product/getAllProducts")
+      .then((response) => {
+        setProductCount(response.data.length);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
 
   return (
     <>
@@ -47,7 +59,7 @@ function AdminDashboard() {
                   <Card className="dashcard">
                     <Card.Body>
                       <Card.Title>Products</Card.Title>
-                      <Card.Text>100</Card.Text>
+                      <Card.Text>{productCount}</Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -55,6 +67,24 @@ function AdminDashboard() {
                   <Card className="dashcard">
                     <Card.Body>
                       <Card.Title>Orders</Card.Title>
+                      <Card.Text>100</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Card className="dashcard">
+                    <Card.Body>
+                      <Card.Title>Employees</Card.Title>
+                      <Card.Text>100</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card className="dashcard">
+                    <Card.Body>
+                      <Card.Title>Sellers</Card.Title>
                       <Card.Text>100</Card.Text>
                     </Card.Body>
                   </Card>
