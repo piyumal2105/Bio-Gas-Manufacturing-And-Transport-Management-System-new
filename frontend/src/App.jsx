@@ -5,6 +5,7 @@ import AdminLogin from "./components/AdminLogin/AdminLogin.jsx";
 import AdminDashboard from "./pages/AdminDashboard/AdminDashboard.jsx";
 import UserLogin from "./pages/UserLogin/UserLogin.jsx";
 import AboutUs from "./pages/About Us/AboutUs.jsx";
+import Customer from "./pages/Customer/Customer.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/user/login" element={<UserLogin />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/allcustomer" element={<Customer />} />
       </Routes>
     </BrowserRouter>
   );

@@ -28,7 +28,7 @@
   color: black;
 }
 
-.active {
+.sidenavlink.active {
   background-color: #f8f9fa;
   border-radius: 4px;
   color: black;
