@@ -1,5 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import AdminNavbar from "../../components/AdminNavbar/AdminNavbar";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,6 +10,18 @@ import Card from "react-bootstrap/Card";
 import "./AdminDashboard.css";
 
 function AdminDashboard() {
+  const [userCount, setUserCount] = useState(0);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/user/allusers")
+      .then((response) => {
+        setUserCount(response.data.length);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <>
       <AdminNavbar />
@@ -24,8 +38,8 @@ function AdminDashboard() {
                 <Col>
                   <Card className="dashcard">
                     <Card.Body>
-                      <Card.Title>Users</Card.Title>
-                      <Card.Text>100</Card.Text>
+                      <Card.Title>Customers</Card.Title>
+                      <Card.Text>{userCount}</Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
