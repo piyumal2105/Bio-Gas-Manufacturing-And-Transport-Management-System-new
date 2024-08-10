@@ -12,7 +12,7 @@ function AboutUs() {
       <Container>
         <div className="about-us">
           <i>
-            <h2 className="mt-4 nameab">About Us page</h2>
+            <h2 className="mt-4 nameab">About Us page create</h2>
           </i>
           <div className="mt-5">
             <Container></Container>
