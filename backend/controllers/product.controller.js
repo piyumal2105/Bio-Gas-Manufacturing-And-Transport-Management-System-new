@@ -1,5 +1,7 @@
 import Product from "../models/product.model.js";
 
+//test
+
 // Generate Product ID
 const generateProductID = async () => {
   const lastStockDetails = await Product.find().sort({ _id: -1 }).limit(1);
