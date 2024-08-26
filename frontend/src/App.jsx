@@ -9,6 +9,7 @@ import AboutUs from "./pages/About Us/AboutUs.jsx";
 import Customer from "./pages/Customer/Customer.jsx";
 import AdminInventory from "./pages/Inventory/AdminInventory.jsx";
 import Product from "./pages/Inventory/Product.jsx";
+import ContactUs from "./pages/Contact Us/ContactUs.jsx";
 
 function App() {
   const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ function App() {
           <Route path="/allcustomer" element={<Customer />} />
           <Route path="/admin/inventory" element={<AdminInventory />} />
           <Route path="/product" element={<Product />} />
+          <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
