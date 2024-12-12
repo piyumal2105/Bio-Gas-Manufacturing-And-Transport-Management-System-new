@@ -16,7 +16,7 @@ function Footer() {
   };
   return (
     <>
-      <footer style={{ backgroundColor: "#FFD800", padding: "30px" }}>
+      <footer style={{ backgroundColor: "#FFD800", padding: "30px", marginTop: "240px" }}>
         <Container>
           <Row>
             <Col xs={12} md={6} lg={3} className="mb-3">
